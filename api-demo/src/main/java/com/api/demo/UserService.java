@@ -1,15 +1,12 @@
 package com.api.demo;
 import java.util.List;
-import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-import com.api.demo.User;
-import com.api.demo.UserRepository;
+
 @Service
 public class UserService {
     @Autowired
@@ -32,7 +29,7 @@ public class UserService {
         Pattern pattern = Pattern.compile("(\\w+?)(:|<|>)(\\w+?),");
         Matcher matcher = pattern.matcher(search + ",");
         while (matcher.find()) {
-            builder.with(matcher.group(1), SearchOperation.getSimpleOperation(matcher.group(2).charAt(0)), matcher.group(3));
+            builder.with(matcher.group(1), Operation.getSimpleOperation(matcher.group(2).charAt(0)), matcher.group(3));
         }
 
         Specification<User> spec = builder.build();

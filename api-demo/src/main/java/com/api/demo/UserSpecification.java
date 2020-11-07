@@ -9,14 +9,14 @@ import javax.persistence.criteria.Root;
 
 public class UserSpecification implements Specification<User> {
 
-    private SearchCriteria criteria;
+    private Criteria criteria;
 
-    public UserSpecification(final SearchCriteria criteria) {
+    public UserSpecification(final Criteria criteria) {
         super();
         this.criteria = criteria;
     }
 
-    public SearchCriteria getCriteria() {
+    public Criteria getCriteria() {
         return criteria;
     }
 

@@ -1,6 +1,6 @@
 package com.api.demo;
 
-public enum SearchOperation {
+public enum Operation {
     EQUALITY, NEGATION, GREATER_THAN, LESS_THAN, LIKE, STARTS_WITH, ENDS_WITH, CONTAINS;
 
     public static final String[] SIMPLE_OPERATION_SET = { ":", "!", ">", "<", "~" };
@@ -17,7 +17,7 @@ public enum SearchOperation {
 
     public static final String RIGHT_PARANTHESIS = ")";
 
-    public static SearchOperation getSimpleOperation(final char input) {
+    public static Operation getSimpleOperation(final char input) {
         switch (input) {
             case ':':
                 return EQUALITY;

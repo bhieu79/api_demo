@@ -8,14 +8,14 @@ import org.springframework.data.jpa.domain.Specification;
 
 public class UserSpecificationsBuilder {
 
-    private final List<SearchCriteria> params;
+    private final List<Criteria> params;
 
     public UserSpecificationsBuilder() {
-        params = new ArrayList<SearchCriteria>();
+        params = new ArrayList<Criteria>();
     }
 
-    public UserSpecificationsBuilder with(String key, SearchOperation operation, Object value) {
-        params.add(new SearchCriteria(key, operation, value));
+    public UserSpecificationsBuilder with(String key, Operation operation, Object value) {
+        params.add(new Criteria(key, operation, value));
         return this;
     }
 

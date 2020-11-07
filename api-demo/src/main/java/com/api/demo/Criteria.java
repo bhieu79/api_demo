@@ -1,15 +1,15 @@
 package com.api.demo;
 
-public class SearchCriteria {
+public class Criteria {
 
     private String key;
-    private SearchOperation operation;
+    private Operation operation;
     private Object value;
-    public SearchCriteria() {
+    public Criteria() {
 
     }
 
-    public SearchCriteria(final String key, final SearchOperation operation, final Object value) {
+    public Criteria(final String key, final Operation operation, final Object value) {
         super();
         this.key = key;
         this.operation = operation;
@@ -24,11 +24,11 @@ public class SearchCriteria {
         this.key = key;
     }
 
-    public SearchOperation getOperation() {
+    public Operation getOperation() {
         return operation;
     }
 
-    public void setOperation(final SearchOperation operation) {
+    public void setOperation(final Operation operation) {
         this.operation = operation;
     }
 
