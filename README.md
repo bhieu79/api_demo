@@ -13,7 +13,7 @@
          http://localhost:8080/api/user?search=id:3  \
          http://localhost:8080/api/user?search=id>1,name={insert_name}  \
          http://localhost:8080/api/user?search=all  \
-         http://localhost:8080/api/user/1 (search by ID)
+         http://localhost:8080/api/user/1 (GET by ID)
          
          
 
