@@ -9,11 +9,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
-
 @Entity
 @Table(name = "user")
-@Data
+
 public class User implements Serializable {
     private static final long serialVersionUID = -297553281792804396L;
 
@@ -21,12 +19,34 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "hp")
-    private int hp;
-    @Column(name = "stamina")
-    private int stamina;
+    @Column(name = "Name")
+    private String name;
+    @Column(name = "Email")
+    private String email;
+    public User() {
+        super();
+    }
 
-    private int atk;
-    private int def;
-    private int agi;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(final Long id) {
+        this.id = id;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(final String firstName) {
+        this.name = firstName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(final String username) {
+        email = username;
+    }
 }
