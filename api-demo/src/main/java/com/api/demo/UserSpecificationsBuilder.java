@@ -31,12 +31,7 @@ public class UserSpecificationsBuilder {
         Specification result = specs.get(0);
 
         for (int i = 1; i < params.size(); i++) {
-            result = params.get(i)
-                    .isOrPredicate()
-                    ? Specification.where(result)
-                    .or(specs.get(i))
-                    : Specification.where(result)
-                    .and(specs.get(i));
+            result = specs.get(i);
         }
         return result;
     }
