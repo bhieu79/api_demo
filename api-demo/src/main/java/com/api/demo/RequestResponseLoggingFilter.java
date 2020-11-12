@@ -10,12 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * A servlet filter to log request and response
- * The logging implementation is pretty native and for demonstration only
- * @author hemant
- *
- */
 @Component
 public class RequestResponseLoggingFilter implements Filter {
 
