@@ -35,4 +35,7 @@ public class UserService {
         Specification<User> spec = builder.build();
         return userRepository.findAll(spec);
     }
+    public void deleteUser(Long userID){
+        userRepository.delete(findUser(userID));
+    }
 }
