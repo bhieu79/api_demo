@@ -12,7 +12,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import javax.sql.DataSource;
 
 @Configuration
-@PropertySource("classpath:mysql.properties")
+@PropertySource("classpath:${envTarget}.properties")
 public class DatasourceConfig {
 
     @Autowired
